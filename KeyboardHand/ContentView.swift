@@ -5,20 +5,38 @@
 //  Created by C171017 on 4/3/25.
 //
 
+// ContentView.swift
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hand Gesture Keyboard")
+                .font(.title)
+                .padding()
+            
+            Button(action: {
+                appState.toggleCapture()
+            }) {
+                Text(appState.isCapturing ? "Stop Capturing" : "Start Capturing")
+                    .padding()
+                    .background(appState.isCapturing ? Color.red : Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            
+            if appState.isCapturing {
+                Text("Status: Active")
+                    .foregroundColor(.green)
+                    .padding()
+            } else {
+                Text("Status: Inactive")
+                    .foregroundColor(.red)
+                    .padding()
+            }
         }
-        .padding()
+        .frame(width: 300, height: 200)
     }
-}
-
-#Preview {
-    ContentView()
 }

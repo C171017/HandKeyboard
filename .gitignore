@@ -1,0 +1,22 @@
+# Xcode specific
+build/
+DerivedData/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+
+# Swift Package Manager
+.build/
+
+# macOS
+.DS_Store
+
+# Swift Playgrounds
+*.playground
+timeline.xctimeline
+
+# Logs
+*.log
+
+# Pods
+Pods/

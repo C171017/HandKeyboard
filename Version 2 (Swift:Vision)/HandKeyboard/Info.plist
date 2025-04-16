@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access to detect hand gestures</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.c171017.HandKeyboard</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>HandKeyboard App</string>
+	<key>CFBundleName</key>
+	<string>HandKeyboard</string>
+	<key>CFBundleDisplayName</key>
+	<string>HandKeyboard</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>HandKeyboard needs to send keystrokes to other applications</string>
+</dict>
+</plist>

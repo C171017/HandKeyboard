@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		6C2FC9B12DAB51B80090FD8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C2FC99A2DAB51B80090FD8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C2FC9A12DAB51B80090FD8A;
+			remoteInfo = HandKeyboard;
+		};
+		6C2FC9BB2DAB51B80090FD8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C2FC99A2DAB51B80090FD8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C2FC9A12DAB51B80090FD8A;
+			remoteInfo = HandKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C2FC9A22DAB51B80090FD8A /* HandKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C2FC9B02DAB51B80090FD8A /* HandKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C2FC9BA2DAB51B80090FD8A /* HandKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6C595FC12DAC1206002B12F4 /* Exceptions for "HandKeyboard" folder in "HandKeyboard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6C2FC9A12DAB51B80090FD8A /* HandKeyboard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6C2FC9A42DAB51B80090FD8A /* HandKeyboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6C595FC12DAC1206002B12F4 /* Exceptions for "HandKeyboard" folder in "HandKeyboard" target */,
+			);
+			path = HandKeyboard;
+			sourceTree = "<group>";
+		};
+		6C2FC9B32DAB51B80090FD8A /* HandKeyboardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HandKeyboardTests;
+			sourceTree = "<group>";
+		};
+		6C2FC9BD2DAB51B80090FD8A /* HandKeyboardUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HandKeyboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C2FC99F2DAB51B80090FD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9AD2DAB51B80090FD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9B72DAB51B80090FD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C2FC9992DAB51B80090FD8A = {
+			isa = PBXGroup;
+			children = (
+				6C2FC9A42DAB51B80090FD8A /* HandKeyboard */,
+				6C2FC9B32DAB51B80090FD8A /* HandKeyboardTests */,
+				6C2FC9BD2DAB51B80090FD8A /* HandKeyboardUITests */,
+				6C2FC9A32DAB51B80090FD8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C2FC9A32DAB51B80090FD8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C2FC9A22DAB51B80090FD8A /* HandKeyboard.app */,
+				6C2FC9B02DAB51B80090FD8A /* HandKeyboardTests.xctest */,
+				6C2FC9BA2DAB51B80090FD8A /* HandKeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C2FC9A12DAB51B80090FD8A /* HandKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C2FC9C42DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboard" */;
+			buildPhases = (
+				6C2FC99E2DAB51B80090FD8A /* Sources */,
+				6C2FC99F2DAB51B80090FD8A /* Frameworks */,
+				6C2FC9A02DAB51B80090FD8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6C2FC9A42DAB51B80090FD8A /* HandKeyboard */,
+			);
+			name = HandKeyboard;
+			packageProductDependencies = (
+			);
+			productName = HandKeyboard;
+			productReference = 6C2FC9A22DAB51B80090FD8A /* HandKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C2FC9AF2DAB51B80090FD8A /* HandKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C2FC9C72DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboardTests" */;
+			buildPhases = (
+				6C2FC9AC2DAB51B80090FD8A /* Sources */,
+				6C2FC9AD2DAB51B80090FD8A /* Frameworks */,
+				6C2FC9AE2DAB51B80090FD8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C2FC9B22DAB51B80090FD8A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6C2FC9B32DAB51B80090FD8A /* HandKeyboardTests */,
+			);
+			name = HandKeyboardTests;
+			packageProductDependencies = (
+			);
+			productName = HandKeyboardTests;
+			productReference = 6C2FC9B02DAB51B80090FD8A /* HandKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C2FC9B92DAB51B80090FD8A /* HandKeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C2FC9CA2DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboardUITests" */;
+			buildPhases = (
+				6C2FC9B62DAB51B80090FD8A /* Sources */,
+				6C2FC9B72DAB51B80090FD8A /* Frameworks */,
+				6C2FC9B82DAB51B80090FD8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C2FC9BC2DAB51B80090FD8A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6C2FC9BD2DAB51B80090FD8A /* HandKeyboardUITests */,
+			);
+			name = HandKeyboardUITests;
+			packageProductDependencies = (
+			);
+			productName = HandKeyboardUITests;
+			productReference = 6C2FC9BA2DAB51B80090FD8A /* HandKeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C2FC99A2DAB51B80090FD8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					6C2FC9A12DAB51B80090FD8A = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					6C2FC9AF2DAB51B80090FD8A = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 6C2FC9A12DAB51B80090FD8A;
+					};
+					6C2FC9B92DAB51B80090FD8A = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 6C2FC9A12DAB51B80090FD8A;
+					};
+				};
+			};
+			buildConfigurationList = 6C2FC99D2DAB51B80090FD8A /* Build configuration list for PBXProject "HandKeyboard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C2FC9992DAB51B80090FD8A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6C2FC9A32DAB51B80090FD8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C2FC9A12DAB51B80090FD8A /* HandKeyboard */,
+				6C2FC9AF2DAB51B80090FD8A /* HandKeyboardTests */,
+				6C2FC9B92DAB51B80090FD8A /* HandKeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C2FC9A02DAB51B80090FD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9AE2DAB51B80090FD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9B82DAB51B80090FD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C2FC99E2DAB51B80090FD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9AC2DAB51B80090FD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2FC9B62DAB51B80090FD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C2FC9B22DAB51B80090FD8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C2FC9A12DAB51B80090FD8A /* HandKeyboard */;
+			targetProxy = 6C2FC9B12DAB51B80090FD8A /* PBXContainerItemProxy */;
+		};
+		6C2FC9BC2DAB51B80090FD8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C2FC9A12DAB51B80090FD8A /* HandKeyboard */;
+			targetProxy = 6C2FC9BB2DAB51B80090FD8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6C2FC9C22DAB51B80090FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = HandKeyboard/Info.plist;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C2FC9C32DAB51B80090FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = HandKeyboard/Info.plist;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6C2FC9C52DAB51B80090FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HandKeyboard/HandKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6C2FC9C62DAB51B80090FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HandKeyboard/HandKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6C2FC9C82DAB51B80090FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HandKeyboard";
+			};
+			name = Debug;
+		};
+		6C2FC9C92DAB51B80090FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HandKeyboard";
+			};
+			name = Release;
+		};
+		6C2FC9CB2DAB51B80090FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HandKeyboard;
+			};
+			name = Debug;
+		};
+		6C2FC9CC2DAB51B80090FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9J57TFV7SC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c171017.HandKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HandKeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C2FC99D2DAB51B80090FD8A /* Build configuration list for PBXProject "HandKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2FC9C22DAB51B80090FD8A /* Debug */,
+				6C2FC9C32DAB51B80090FD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C2FC9C42DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2FC9C52DAB51B80090FD8A /* Debug */,
+				6C2FC9C62DAB51B80090FD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C2FC9C72DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2FC9C82DAB51B80090FD8A /* Debug */,
+				6C2FC9C92DAB51B80090FD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C2FC9CA2DAB51B80090FD8A /* Build configuration list for PBXNativeTarget "HandKeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2FC9CB2DAB51B80090FD8A /* Debug */,
+				6C2FC9CC2DAB51B80090FD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C2FC99A2DAB51B80090FD8A /* Project object */;
+}

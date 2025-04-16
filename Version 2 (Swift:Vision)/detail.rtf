@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 This is a Mac OS app that detects users' finger pinch combination to output keystroke functioning as a alternative way for typing\
+\
+i have noticed that for macOS most of the job can be done by just keyboard with out touchpad or mouse. So with little refinement it is completely possible to find a way to use mac with keyboard only\
+\
+Significance include this is no physical interaction with device needed with only a camera attach to your cap you're basically free to use your device\
+\
+\
+I'm imagining dividing the task into two parts. Since it's almost much harder to do a under lower level of development this app will work on the surface level\
+\
+and for easy understanding and power efficiency and mangament, simplicity is prioritized\
+\
+first part is only a pinch combination to keystroke\
+\
+second is an on device llm that function similar to commad + f to locate text and perfrom click task with enter.\
+\
+If it is possbile, we can add the hand recgonition like those in quest and AVP to scroll and move things but that's much beyond the current stage and theoritically much harder to execute by individual\
+\
+\
+\
+Prompt:\
+\
+Create a simple macOS app in Swift that detects hand finger pinch combinations using the Vision framework and maps them to keyboard inputs. The app should:\
+\
+1. Use the macOS camera to capture video\
+2. Display the video feed in a window\
+3. Process the video stream with Vision framework to detect hand landmarks\
+4. Recognize different finger pinch combinations (like index-thumb, middle-thumb, etc.)\
+5. Show visual feedback in the window indicating which pinch gesture is currently being detected\
+6. Display text showing what keyboard input is being triggered\
+7. Map each detected pinch gesture to a specific keystroke\
+8. make the codes as easy and simple as possible for easy understanding and maintainence and power efficiency \
+\
+\
+\
+As a beginner, I need straightforward, well-commented code with clear explanations. Focus on:\
+- Simple implementation that prioritizes reliability over fancy features\
+\
+\
+ 1. Models: Isolated data structures and types\
+    - Gesture types and configurations\
+    - Hand landmark representation\
+    - Key mapping logic\
+  2. Services: Each with a specific responsibility\
+    - Camera management\
+    - Vision/computer vision processing\
+    - Gesture recognition\
+    - Keyboard simulation\
+    - Permission handling\
+  3. ViewModel: Acts as coordinator\
+    - Connects services with views\
+    - Handles business logic\
+    - Provides observable state for UI\
+  4. Views: Split into focused components\
+    - Main view composition\
+    - Camera preview\
+    - Hand landmark visualization\
+    - Gesture status display\
+    - Settings UI\
+    - Permission management UI\
+  5. Utils: Common utilities and configurations}

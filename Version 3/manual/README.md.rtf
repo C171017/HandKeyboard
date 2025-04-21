@@ -1,0 +1,207 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 HelveticaNeue;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # =============================\
+# Hand Keyboard Project\
+# =============================\
+# This document contains all source files for the real\uc0\u8209 time hand\u8209 gesture\u8209 to\u8209 keystroke application\
+# described in your specification. Copy the individual file sections into their own .py files in\
+# your project directory, or use an IDE feature to split them automatically.\
+# ---------------------------------------------------------\
+# requirements.txt (install with `pip install -r requirements.txt`)\
+# ---------------------------------------------------------\
+# mediapipe>=0.10\
+# opencv-python\
+# pynput\
+# numpy\
+\
+\pard\pardeftab560\partightenfactor0
+
+\f1\b\fs40 \cf0 Hand keyboard\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55358 \u56800 
+\f1\b  Project Goal: Hand Gesture Detection with MediaPipe Hands
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\uc0\u55357 \u56524 
+\f1\b  Objective
+\f2\b0 \
+\
+Build a Python application using 
+\f1\b MediaPipe Hands
+\f2\b0  that detects 
+\f1\b 3D hand gestures
+\f2\b0  and 
+\f1\b triggers keystrokes
+\f2\b0  based on the 
+\f1\b spatial relationship between the thumb tip and other key landmarks
+\f2\b0 .\
+\
+\uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55357 \u56538 
+\f1\b  Reference: MediaPipe Hands Landmark Index
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 ID
+\f2\b0 	
+\f1\b Landmark
+\f2\b0 \
+0	WRIST\
+1\'964	Thumb (CMC \uc0\u8594  TIP)\
+5\'968	Index Finger\
+9\'9612	Middle Finger\
+13\'9616	Ring Finger\
+17\'9620	Pinky\
+\
+\
+\
+\uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55357 \u57056 \u65039 
+\f1\b  Features
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	\'95	Real-time 3D hand tracking for 
+\f1\b both hands
+\f2\b0 .\
+	\'95	Use 
+\f1\b thumb tip (ID 4)
+\f2\b0  as the reference point.\
+	\'95	Measure 3D distances from thumb tip to specific landmarks on other fingers.\
+	\'95	Trigger 
+\f1\b distinct keystrokes
+\f2\b0  based on distance-based combinations.\
+	\'95	
+\f1\b Each hand acts independently
+\f2\b0 , with only 
+\f1\b one action triggered per hand at a time
+\f2\b0 .\
+	\'95	All gesture triggers are managed with 
+\f1\b boolean flags
+\f2\b0  to prevent repeated firings.\
+\
+\uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55356 \u57263 
+\f1\b  Gesture Logic
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\uc0\u9989 
+\f1\b  Group 1 - Instant Triggers
+\f2\b0 \
+	\'95	Thumb tip (4) + PIP/DIP joints of other fingers.\
+	\'95	Landmark pairs:\
+	\'95	4,6, 4,7, 4,10, 4,11, 4,14, 4,15, 4,18, 4,19\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Trigger Condition:
+\f2\b0 \
+	\'95	If 3D distance < 
+\f1\b Group 1 Threshold
+\f2\b0 , fire mapped keystroke 
+\f1\b immediately
+\f2\b0 .\
+	\'95	Use a 
+\f1\b boolean flag
+\f2\b0  per gesture to debounce and avoid re-triggering.\
+\
+\uc0\u11835 \
+\
+\uc0\u9201 \u65039 
+\f1\b  Group 2 - Delayed Combination Triggers
+\f2\b0 \
+	\'95	Thumb tip (4) + 
+\f1\b fingertips
+\f2\b0 :\
+8 (Index), 12 (Middle), 16 (Ring), 20 (Pinky)\
+\
+
+\f1\b Valid Combinations:
+\f2\b0 \
+	\'95	Single finger:\
+	\'95	4,8, 4,12, 4,16, 4,20\
+	\'95	Two fingers:\
+	\'95	4,8,12, 4,12,16, 4,16,20\
+	\'95	Three fingers:\
+	\'95	4,8,12,16, 4,12,16,20\
+	\'95	All four fingers:\
+	\'95	4,8,12,16,20\
+\
+
+\f1\b Trigger Flow:
+\f2\b0 \
+	1.	If any fingertip is within 
+\f1\b pre-trigger distance
+\f2\b0  from the thumb tip \uc0\u8594  start a 
+\f1\b timer
+\f2\b0 .\
+	2.	After a configurable 
+\f1\b delay time
+\f2\b0 , check which fingertips are now within 
+\f1\b Group 2 Threshold
+\f2\b0 .\
+	3.	Fire keystroke based on the specific combination (who and how many).\
+	4.	Use 
+\f1\b boolean flags
+\f2\b0  to debounce group 2 gestures.\
+\
+\uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55357 \u56615 
+\f1\b  Parameters
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+All configurable in config.py:\
+	\'95	THRESHOLD_GROUP1: Distance threshold for Group 1 instant triggers.\
+	\'95	PRETRIGGER_DISTANCE: Initial distance for Group 2 gesture intent detection.\
+	\'95	THRESHOLD_GROUP2: Final distance to confirm Group 2 gesture after delay.\
+	\'95	DETERMINE_TIME: Delay (in seconds or frames) before confirming a Group 2 gesture.\
+\
+\uc0\u11835 \
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \uc0\u55357 \u56770 \u65039 
+\f1\b  File Structure
+\f2\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 	\'95	config.py\
+\uc0\u8594  Stores constants and tuning parameters.\
+	\'95	mapping.py\
+\uc0\u8594  Defines mappings from landmark combinations to specific keystrokes.\
+	\'95	gesture.py\
+\uc0\u8594  Core logic to:\
+	\'95	Measure distances\
+	\'95	Track state and flags\
+	\'95	Trigger keystrokes\
+	\'95	main.py\
+\uc0\u8594  Entry point:\
+	\'95	Sets up webcam stream\
+	\'95	Integrates MediaPipe\
+	\'95	Passes landmarks to gesture engine\
+\
+\uc0\u11835 \
+\
+}

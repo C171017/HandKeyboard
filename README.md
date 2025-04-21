@@ -6,7 +6,9 @@ A simple demo built with Python, allowing users to scroll pages by activating an
 #### Version 2 (Previous repo deleted)
 Developed using Swift and Apple's Vision framework, this iteration aimed at becoming a general solution for a new gesture-based typing method. Throughout development, the exact mechanism underwent several iterations. Ultimately, this version was abandoned due to challenges arising from processing 2D images without LiDAR or TrueDepth sensors, which frequently led to inaccurate gesture recognition and unintended actions.
 
-[Demo Video Available Here]
+## 🎬 Demo
+
+[![Watch the demo](https://img.youtube.com/vi/eBK7kDqg1JQ/hqdefault.jpg)](https://youtube.com/shorts/eBK7kDqg1JQ)
 
 #### Version 3 (In Progress)
 Currently rebuilding the project in Python using MediaPipe, which features simulated pseudo-3D processing capabilities to improve gesture recognition accuracy.

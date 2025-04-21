@@ -9,7 +9,8 @@ import math
 from typing import Dict, List, Tuple
 
 from pynput.keyboard import Controller, Key
-from . import config, mapping
+import config
+import mapping
 
 keyboard = Controller()
 
@@ -26,6 +27,21 @@ def _dist3(a, b) -> float:
         (a.z - b.z) ** 2
     )
 
+def _get_reference_scale(lm: list) -> float:
+    """Distance wrist (0) ↔ middle MCP (9), used to normalize z."""
+    w, m = lm[0], lm[9]
+    return math.sqrt(
+        (w.x - m.x) ** 2 +
+        (w.y - m.y) ** 2 +
+        (w.z - m.z) ** 2
+    )
+
+def _norm_dist3(a, b, scale: float) -> float:
+    """3D distance with z divided by the hand‐size scale."""
+    dx = a.x - b.x
+    dy = a.y - b.y
+    dz = (a.z - b.z) / scale
+    return math.sqrt(dx*dx + dy*dy + dz*dz)
 
 class _HandState:
     """Per‑hand state store."""
@@ -56,55 +72,53 @@ class HandGestureDetector:
         return False
 
     # ---------------------------------------------------------
-    def update(self,
-               lm,
-               hand_label: str
-               ) -> List[str]:
-        """
-        Returns list of keystrokes to send this frame.
-        """
+    def update(self, lm, hand_label: str) -> List[str]:
         out: List[str] = []
         s = self.state[hand_label]
 
-        # ------------- GROUP 1  (instant) --------------------
+        # compute per-frame hand-size scale
+        scale = _get_reference_scale(lm)
+
+        # --------- GROUP 1 (instant) ---------
         for pair in _LANDMARK_PAIRS_G1:
-            dist = _dist3(lm[pair[0]], lm[pair[1]])
+            dist = _norm_dist3(lm[pair[0]], lm[pair[1]], scale)
             active = s.g1_active[pair]
 
-            # rising edge with hysteresis
-            if (not active and dist <= config.THRESHOLD_G1_IN):
+            if not active and dist <= config.THRESHOLD_G1_IN:
                 key = mapping.GROUP1[hand_label].get(pair)
                 if key and self._cooldown_ok(s, key, config.COOLDOWN_G1):
                     keyboard.press(key)
                     keyboard.release(key)
                     out.append(key)
                 s.g1_active[pair] = True
-            # reset when distance *exits* hysteresis band
+
             elif active and dist >= config.THRESHOLD_G1_OUT:
                 s.g1_active[pair] = False
 
-        # ------------- GROUP 2  (combo) -----------------------
+        # --------- GROUP 2 (combo) ---------
         thumb = lm[4]
 
-        # Step 1 – intent detection
-        if any(_dist3(thumb, lm[t]) <= config.PRETRIGGER_DISTANCE for t in _G2_TIPS):
+        # Step 1 – intent detection
+        if any(_norm_dist3(thumb, lm[t], scale) <= config.PRETRIGGER_DISTANCE for t in _G2_TIPS):
             if s.timer_start is None:
                 s.timer_start = time.time()
         else:
             s.timer_start = None
 
-        # Step 2 – timer matured → evaluate combo once
+        # Step 2 – timer matured → evaluate combo
         if s.timer_start and (time.time() - s.timer_start >= config.DETERMINE_TIME):
             combo = [4]
             for t in _G2_TIPS:
-                if _dist3(thumb, lm[t]) <= config.THRESHOLD_GROUP2:
+                if _norm_dist3(thumb, lm[t], scale) <= config.THRESHOLD_GROUP2:
                     combo.append(t)
+
             combo_t = tuple(sorted(combo))
             key = mapping.GROUP2[hand_label].get(combo_t)
             if key and self._cooldown_ok(s, key, config.COOLDOWN_G2):
                 keyboard.press(key)
                 keyboard.release(key)
                 out.append(key)
+
             s.timer_start = None
 
         return out

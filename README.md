@@ -14,8 +14,11 @@ Detect the 3-D relative positions of both-hand joints, map specific spatial “p
 
 Version	Tech Stack	Goal	Status
 v1	Python + MediaPipe	One-hand fist toggle for auto-scroll	Demo lost with old laptop
+
 v2	Swift + Apple Vision	Full gesture-typing prototype in 2-D	Abandoned – depth ambiguity without LiDAR/TrueDepth
+
 v3 (Work in Progress)	Python + MediaPipe (pseudo-3-D)	Simulate depth, add debounce/cool-down, dual-range detection & smoothing	Active development
+
 v4 (Planned)	Meta Quest hand-tracking SDK	Native Quest app, full 6-DoF gestures	Design phase
 
 

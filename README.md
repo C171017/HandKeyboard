@@ -31,11 +31,6 @@ v4 (Planned)	Meta Quest hand-tracking SDK	Native Quest app, full 6-DoF gestures	
 	•	Keystroke mapper: configurable JSON mapping joint-combo → key.
 	•	Cross-platform stub: WebSocket server broadcasts recognized keys to any client.
 
-
-### Project README
-
-Not sure where's the problem... Z axis doesn't seem to work
-
 #### Version 1
 A simple demo built with Python, allowing users to scroll pages by activating and deactivating a fist gesture. Designed to facilitate hands-free reading by eliminating reliance on mouse and keyboard inputs. This version was lost along with my previous laptop.
 

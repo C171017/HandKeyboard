@@ -6,7 +6,7 @@ Hands-only typing for smart glasses, MR headsets, and VR devices—no physical/v
 
 ✨ Key Idea
 
-Detect the 3-D relative positions of both-hand joints, map specific spatial “poses” to characters, and fire native keystrokes. This bypasses awkward VR virtual keyboards and noisy speech input.
+Detect the 3-D relative positions of both-hand joints, map specific spatial “poses” to characters, and fire native keystrokes. This bypasses awkward VR virtual keyboards and be an alternative to speech input.
 
 ⸻
 

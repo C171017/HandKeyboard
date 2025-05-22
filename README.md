@@ -4,7 +4,7 @@
 
 ## 🎬 Demo (version 4)
 
-[![Watch the demo]()](https://youtube.com/shorts/r-O3qNZsaQk)
+[![Watch the demo](https://img.youtube.com/vi/r-O3qNZsaQk/hqdefault.jpg)](https://youtube.com/shorts/r-O3qNZsaQk)
 
 Hand-Gesture Keyboard · Next-Gen MR/VR Text-Input Prototype
 
